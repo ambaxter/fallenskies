@@ -1,0 +1,15 @@
+<div>
+{{#if username}}
+    <p>Welcome {{username}}</p>
+    <form action="/logout" method="post">
+        <button>Logout</button>
+    </form>
+{{else}}
+    <form action="/login" method="post">
+        <p>Username: <input name="username"></p>
+        <p>Password: <input name="password"></p>
+        <button>Login</button>
+    </form>
+    <p>Not registered? Go <a href="/register">register!</a></p>
+{{/if}}
+</div>

@@ -1,0 +1,22 @@
+<div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
+    <div>
+        {{#if is_registered}}
+            <p>Congratulations on getting registered! Login <a href="/">here!</a></p>
+        {{else}}
+            {{#if errors}}
+                <p>Errors detected!</p>
+                <ul>
+                    {{#each errors}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            {{/if}}
+            <form action="/register" method="post">
+                <p>Username: <input name="username"></p>
+                <p>Password: <input name="password"></p>
+                <button>Register</button>
+            </form>
+        {{/if}}
+
+    </div>
+</div>

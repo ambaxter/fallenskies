@@ -1,0 +1,47 @@
+[package]
+name = "fallenskies"
+version = "0.1.0"
+authors = ["abaxter <Adam Baxter>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# Actix
+actix-web = "3.2.0"
+actix-files = "0.4"
+actix-session = "0.4"
+actix-utils = "2"
+async-trait = "0.1"
+
+# Tracing
+tracing = "0.1"
+tracing-appender = "0.1"
+tracing-futures = "0.2"
+tracing-subscriber = "0.2"
+tracing-actix-web = "0.2"
+tracing-bunyan-formatter = "0.1"
+tracing-log = "0.1"
+
+# Models
+sqlx = {version = "0.4", features = ["runtime-actix-native-tls", "postgres", "macros", "uuid", "ipnetwork" ] }
+ron = "0.6"
+serde = "1.0.117"
+serde_derive = "1.0.117"
+serde_json = "1.0.59"
+erased-serde = "0.3"
+ipnetwork = "0.17.0"
+base64 = "0.13.0"
+
+# Security
+rust-argon2 = "0.8.2"
+
+# Application
+listenfd = "0.3.3"
+dotenv = "0.15.0"
+regex = "1.4.1"
+lazy_static = "1.4"
+gethostname = "0.2.1"
+anyhow = "1.0.34"
+handlebars = {version = "3.5.1", features = ["dir_source"] }
+rksuid = "0.4.0"
